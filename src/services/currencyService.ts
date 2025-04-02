@@ -2,7 +2,7 @@
 import { toast } from "sonner";
 
 // API endpoint for exchange rates
-const API_URL = "https://api.exchangerate-api.com/v4/latest/";
+const API_URL = "https://v6.exchangerate-api.com/v6/43c9a4e03d787e9fdbde01d4/latest/USD";
 
 // Define currency types
 export type Currency = {
