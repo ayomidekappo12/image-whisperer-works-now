@@ -53,7 +53,9 @@ const CurrencyConverter = () => {
   return (
     <Card className="currency-card w-full max-w-lg mx-auto shadow-lg">
       <CardHeader className="converter-gradient text-white rounded-t-lg">
-        <CardTitle className="text-center text-2xl font-bold">Currency Converter</CardTitle>
+        <CardTitle className="text-center text-2xl font-bold">
+          Currency Converter
+        </CardTitle>
       </CardHeader>
       <CardContent className="p-6">
         <div className="space-y-6">
@@ -77,7 +79,10 @@ const CurrencyConverter = () => {
           {/* Currency Selection */}
           <div className="grid grid-cols-[1fr,auto,1fr] items-center gap-4">
             <div className="space-y-2">
-              <label htmlFor="from-currency" className="block text-sm font-medium">
+              <label
+                htmlFor="from-currency"
+                className="block text-sm font-medium"
+              >
                 From
               </label>
               <Select value={fromCurrency} onValueChange={setFromCurrency}>
@@ -105,7 +110,10 @@ const CurrencyConverter = () => {
             </Button>
 
             <div className="space-y-2">
-              <label htmlFor="to-currency" className="block text-sm font-medium">
+              <label
+                htmlFor="to-currency"
+                className="block text-sm font-medium"
+              >
                 To
               </label>
               <Select value={toCurrency} onValueChange={setToCurrency}>
@@ -143,8 +151,12 @@ const CurrencyConverter = () => {
             <div className="mt-6 space-y-4">
               <Separator />
               <div className="rounded-lg bg-muted p-4">
-                <div className="text-sm text-muted-foreground mb-2">Conversion Result:</div>
-                <div className="text-2xl font-bold">{formatCurrency(convertedAmount, toCurrency)}</div>
+                <div className="text-sm text-muted-foreground mb-2">
+                  Conversion Result:
+                </div>
+                <div className="text-2xl font-bold">
+                  {formatCurrency(convertedAmount, toCurrency)}
+                </div>
                 {exchangeRate && (
                   <div className="text-sm text-muted-foreground mt-2">
                     1 {fromCurrency} = {exchangeRate.toFixed(6)} {toCurrency}
